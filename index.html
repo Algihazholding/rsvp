@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Responsive Buttons</title>
+    <title>Dynamic Responsive Layout</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
             margin: 0;
+            background: url('https://via.placeholder.com/2480x3508') no-repeat center center/cover; /* Replace with your A4 image URL */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            overflow: hidden;
         }
 
         .button-container {
@@ -20,20 +21,24 @@
             flex-direction: column;
             gap: 20px;
             text-align: center;
+            background: rgba(255, 255, 255, 0.8); /* Light transparent background for better contrast */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
         }
 
         .button {
             padding: 15px 30px;
             font-size: 1.2em;
             color: white;
-            background: linear-gradient(90deg, #4CAF50, #3B8C40);
+            background: #563090; /* Updated button color */
             border: none;
             border-radius: 25px;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             text-decoration: none;
             display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .button:hover {
@@ -50,6 +55,10 @@
             .button {
                 font-size: 1em;
                 padding: 12px 20px;
+            }
+
+            .button-container {
+                padding: 20px;
             }
         }
     </style>

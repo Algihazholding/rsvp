@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Layout with A4 Background</title>
+    <title>Dynamic Layout with Buttons Over Image</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
+            background: #f0f0f0;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #f0f0f0;
             height: 100vh;
         }
 
-        .a4-container {
+        .container {
             position: relative;
-            width: 2480px;
-            height: 3508px;
-            max-width: 100%;
-            max-height: 100%;
+            width: 80%; /* Adjusts dynamically */
+            max-width: 800px; /* Ensures it doesn't get too large */
+            aspect-ratio: 1 / 1.414; /* A4 aspect ratio (210 x 297 mm) */
             background: url('https://infinitycarehospital.com/wp-content/uploads/2024/12/image.jpg') no-repeat center center/cover;
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
@@ -29,21 +28,24 @@
 
         .button-container {
             position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translateX(-50%);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
             gap: 20px;
-            width: 80%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1); /* Subtle overlay for contrast */
         }
 
         .button {
             padding: 15px 30px;
             font-size: 1.2em;
             color: white;
-            background: #563090; /* Updated button color */
+            background: #563090; /* Button color */
             border: none;
             border-radius: 25px;
             cursor: pointer;
@@ -52,7 +54,7 @@
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
             width: 100%;
-            max-width: 400px;
+            max-width: 300px; /* Prevents buttons from being too wide */
         }
 
         .button:hover {
@@ -71,14 +73,14 @@
                 padding: 12px 20px;
             }
 
-            .button-container {
+            .container {
                 width: 90%;
             }
         }
     </style>
 </head>
 <body>
-    <div class="a4-container">
+    <div class="container">
         <div class="button-container">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfsBIjUskoOWtiGRgvlugCRVLxLAJkbqtNfYPsDF_VXVcV5_Q/viewform?usp=dialog" class="button">RSVP for the Event</a>
             <a href="locationurl" class="button">Get Location of SEP Plant</a>

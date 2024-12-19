@@ -17,11 +17,12 @@
 
         .container {
             position: relative;
-            width: 50%; /* Dynamically adjusts */
-            max-width: 550 px; /* Maximum width for larger screens */
+            width: 60%; /* Scaled down for better appearance */
+            max-width: 600px; /* Ensures it doesn't grow too large */
+            height: auto;
             aspect-ratio: 1 / 1.414; /* A4 aspect ratio */
             background: url('https://infinitycarehospital.com/wp-content/uploads/2024/12/image.jpg') no-repeat center center;
-            background-size: cover; /* Ensures the image covers the entire container */
+            background-size: cover; /* Image fully covers the container */
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
             overflow: hidden;
@@ -68,13 +69,13 @@
         }
 
         @media (max-width: 600px) {
+            .container {
+                width: 90%; /* Ensures responsiveness on small screens */
+            }
+
             .button {
                 font-size: 1em;
                 padding: 12px 20px;
-            }
-
-            .container {
-                width: 90%;
             }
         }
     </style>
